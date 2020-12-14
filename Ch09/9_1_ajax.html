@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>9-1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            $('button').click(function(){
+
+                $.ajax({
+                    url: 'http://localhost:8080/Ch07/7_1_jsonData.jsp',
+                    type: 'get',
+                    dataType: 'json',
+                    success: function(data){
+                        alert(data);
+                    }
+                });
+
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <h3>9-1.jquery ajax(비동기 통신)</h3>
+
+    <button>데이터 요청하기</button>
+
+    
+</body>
+</html>
